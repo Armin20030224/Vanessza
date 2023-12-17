@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style/css/styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Azt akarom,hogy együtt legyünk! Akarsz a barátnőm lenni kicsike? </h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "igenButton" onclick="nextPage()">IGEN:)  </button>
+                <button class="btn" id="nemButton" onmouseover="moveButton()">NEM:( </button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "igen.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('nemutton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('nemButton').offsetHeight);
+                        document.getElementById('nemButton').style.left = `${x}px`;
+                        document.getElementById('nemButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
